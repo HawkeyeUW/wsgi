@@ -31,28 +31,19 @@ def home():
     return '\n'.join(body)
 
 def positive(*args):
-    value = args[0]
-    value = int(value)
-    if value > 0:
-        sign = True
-    else:
-        sign = False
+    value = int(args)
+    sign = 'positive'
+    #if value > 0:
+    #    sign = True
+    #else:
+    #    sign = False
 
-    page = ['<h1>Pseduo Calculator for Positive Values</h1>']
-    page.append(f'<html>The value is {value} and it is positive {sign}</html>')
-    return '\n'.join(page)
+    page = ['<h1>Pseduo Calculator</h1>']
+    page.append(f'<html>The value is {value} and it is {sign}</html>')
+    return '\n'.page(body)
 
-def negative(*args):
-    value = args[0]
-    value = int(value)
-    if value < 0:
-        sign = True
-    else:
-        sign = False
-
-    page = ['<h1>Pseduo Calculator for Negative Values</h1>']
-    page.append(f'<html>The value is {value} and it is negative {sign}</html>')
-    return '\n'.join(page)
+def negative():
+    pass
 
 def resolve_path(path):
     """
